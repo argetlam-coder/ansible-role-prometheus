@@ -24,6 +24,12 @@ prometheus_version: v3.15.1
 prometheus_uid: ""
 prometheus_gid: ""
 
+# Controls the user that the container runs as. Set to `0` to run as root.
+prometheus_container_uid: "{{ prometheus_uid }}"
+
+# Controls the group that the container runs as. Set to `0` to run as root.
+prometheus_container_gid: "{{ prometheus_gid }}"
+
 # The hostname at which prometheus is served.
 prometheus_hostname: ""
 

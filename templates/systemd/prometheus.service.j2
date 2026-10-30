@@ -25,7 +25,7 @@ ExecStartPre={{ devture_systemd_docker_base_host_command_docker }} create \
       --rm \
       --name={{ prometheus_identifier }} \
       --log-driver=none \
-      --user={{ prometheus_uid }}:{{ prometheus_gid }} \
+      --user={{ prometheus_container_uid }}:{{ prometheus_container_gid }} \
       --cap-drop=ALL \
       --read-only \
       --network={{ prometheus_container_network }} \
